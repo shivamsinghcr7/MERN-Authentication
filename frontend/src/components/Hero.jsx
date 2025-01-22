@@ -1,8 +1,8 @@
 import { Container, Card, Button } from "react-bootstrap";
-import { useSelector, useDispatch } from "react-redux";
+// import { useSelector, useDispatch } from "react-redux";
 //className='d-flex justify-content-center'
 const Hero = () => {
-  const { userInfo } = useSelector((state) => state.auth);
+  // const { userInfo } = useSelector((state) => state.auth);
 
   return (
     <div className="py-5">
@@ -16,16 +16,16 @@ const Hero = () => {
           </p>
 
           {/* {!userInfo.name && !userInfo.email ? ( */}
-            <div className="d-flex justify-content-center">
-              <Button className="me-3" variant="primary" href="/login">
-                Sign In
-              </Button>
+          <div className="d-flex justify-content-center">
+            <Button className="me-3" variant="primary" href="/login">
+              Sign In
+            </Button>
 
-              <Button className="me-3" variant="secondary" href="/register">
-                Register
-              </Button>
-            </div>
-           {/* ) : (
+            <Button className="me-3" variant="secondary" href="/register">
+              Register
+            </Button>
+          </div>
+          {/* ) : (
              <div className="d-flex justify-content-center p-2 border text-bg-primary fw-bold">
                Hello, {userInfo.name}
              </div>
