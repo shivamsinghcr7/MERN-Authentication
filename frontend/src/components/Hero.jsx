@@ -1,8 +1,8 @@
 import { Container, Card, Button } from "react-bootstrap";
-import { useSelector, useDispatch } from "react-redux";
+// import { useSelector, useDispatch } from "react-redux";
 
 const Hero = () => {
-  const { userInfo } = useSelector((state) => state.auth);
+  //  const { userInfo } = useSelector((state) => state.auth);
 
   return (
     <div className="py-5">
