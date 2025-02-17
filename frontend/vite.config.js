@@ -7,11 +7,13 @@ import { RENDER_URL, LOCAL_URL, VERCEL_URL } from "./url.js";
 export default defineConfig({
   plugins: [react()],
   server: {
-    port: 3000,
+    // port: 3000,
     proxy: {
       "/api": {
-        target: "http://localhost:5000",
+        target: `${RENDER_URL}`,
         changeOrigin: true,
+        secure: false,
+        rewrite: (path) => path.replace(/^\/api/, ""),
       },
     },
   },

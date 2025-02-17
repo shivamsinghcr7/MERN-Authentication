@@ -7,10 +7,20 @@ import userRoutes from "./routes/userRoutes.js";
 import { errorHandler, notFound } from "./middleware/errorMiddlleware.js";
 import connectDB from "./configs/db.js";
 import cookieParser from "cookie-parser";
+import cors from "cors";
+import { VERCEL_URL } from "../frontend/url.js";
 
 connectDB();
 
 const app = express();
+
+//cors
+app.use(
+  cors({
+    origin: `${VERCEL_URL}`, // Allow requests from your frontend
+    credentials: true, // Allow cookies and credentials
+  })
+);
 
 // allows to view body in JSON format
 app.use(express.json());
