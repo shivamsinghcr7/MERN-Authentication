@@ -2,7 +2,6 @@ import express from "express";
 import dotenv from "dotenv";
 dotenv.config();
 const PORT = process.env.PORT_ENV || 5000;
-// const PORT = 5000;
 
 import userRoutes from "./routes/userRoutes.js";
 import { errorHandler, notFound } from "./middleware/errorMiddlleware.js";
